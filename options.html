@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>GamePad Input Options</title>
+</head>
+<body>
+  <div class="header">
+    <button id="settings-button">Settings</button>
+    <h1>GamePad Input Settings</h1>
+  </div>
+  <label for="stick-selection">Select Stick:</label>
+  <select id="stick-selection">
+    <option value="left">Left Stick</option>
+    <option value="right" selected>Right Stick</option>
+  </select>
+
+  <button id="save-settings">Save Settings</button>
+  <p id="status-message"></p>
+
+  <script src="options.js"></script>
+</body>
+</html>
