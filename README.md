@@ -19,18 +19,18 @@ The GamePad Extension allows you to control web pages using a gamepad. This exte
    ```
    
 2.Load the extension in Chrome:
-   Open Chrome and go to chrome://extensions/.
-   Enable "Developer mode" using the toggle switch in the top right corner.
-   Click on "Load unpacked" and select the cloned repository directory.
-   Usage
-   Open a web page or a new tab.
+- Open Chrome and go to chrome://extensions/.
+- Enable "Developer mode" using the toggle switch in the top right corner.
+- Click on "Load unpacked" and select the cloned repository directory.
+- Usage
+- Open a web page or a new tab.
 3.Connect your gamepad.
-   Use the selected axes to navigate and interact with the web page.
+- Use the selected axes to navigate and interact with the web page.
 4.Configuration
-   The extension allows you to configure which axes on the gamepad are used for navigation. You can change these settings in the extension's options page.
+- The extension allows you to configure which axes on the gamepad are used for navigation. You can change these settings in the extension's options page.
 5.Contributing
-   Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+- Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
    
-   License
-   This project is licensed under the MIT License. See the LICENSE file for details.
+ ### License
+- This project is licensed under the MIT License. See the LICENSE file for details.
    
