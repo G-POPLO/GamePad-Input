@@ -4,34 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="config.css">
-  <title>GamePad Config</title>
+  <title data-i18n="configTitle"></title>
 </head>
 <body>
-  <h1>GamePad Configuration</h1>
-  <p>This is the configuration page for the GamePad extension.</p>
-
-  <h2>Usage Instructions</h2>
+  <h1 data-i18n="configTitle"></h1>
+  <p data-i18n="gamepadInputSettings"></p>
+  <h2 data-i18n="usageInstructions"></h2>
   <ul>
-    <li><strong>Y Button (通常按钮索引为 3)</strong>: 刷新当前页面。</li>
-    <li><strong>B Button (通常按钮索引为 1)</strong>: 关闭当前标签页。</li>
-    <li><strong>Home Button (通常按钮索引为 0)</strong>: 创建新标签页。</li>
-    <li><strong>Left Bumper (LB) (通常按钮索引为 4)</strong>: 切换到前一个标签页。</li>
-    <li><strong>Right Bumper (RB) (通常按钮索引为 5)</strong>: 切换到下一个标签页。</li>
-    <li><strong>Left Trigger (LT) (通常按钮索引为 6)</strong>: 后退历史记录。</li>
-    <li><strong>Right Trigger (RT) (通常按钮索引为 7)</strong>: 前进历史记录。</li>
-    <li><strong>X Button (通常按钮索引为 2)</strong>: 复制当前标签页。</li>
+    <li><strong data-i18n="yButton"></strong></li>
+    <li><strong data-i18n="bButton"></strong></li>
+    <li><strong data-i18n="homeButton"></strong></li>
+    <li><strong data-i18n="lbButton"></strong></li>
+    <li><strong data-i18n="rbButton"></strong></li>
+    <li><strong data-i18n="ltButton"></strong></li>
+    <li><strong data-i18n="rtButton"></strong></li>
+    <li><strong data-i18n="xButton"></strong></li>
   </ul>
 
-  <button id="close-config">Close</button>
-
-  <script>
-    document.getElementById('close-config').addEventListener('click', () => {
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        if (tabs.length > 0) {
-          chrome.tabs.remove(tabs[0].id);
-        }
-      });
-    });
-  </script>
+  <!-- 引入config.js -->
+  <script src="config.js"></script>
 </body>
 </html>

@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>GamePad Input Options</title>
+  <title data-i18n="gamepadInputSettings"></title>
 </head>
 <body>
   <div class="header">
-    <button id="settings-button">Settings</button>
-    <h1>GamePad Input Settings</h1>
+	<button id="settings-button">Settings</button>
+    <h1 data-i18n="gamepadInputSettings"></h1>
   </div>
-  <label for="stick-selection">Select Stick:</label>
+  <label for="stick-selection" data-i18n="selectStick"></label>
   <select id="stick-selection">
-    <option value="left">Left Stick</option>
-    <option value="right" selected>Right Stick</option>
+    <option value="left" data-i18n="leftStick"></option>
+    <option value="right" selected data-i18n="rightStick"></option>
   </select>
-
-  <button id="save-settings">Save Settings</button>
+  <button id="save-settings" data-i18n="saveSettings"></button>
   <p id="status-message"></p>
-
+  <label for="language-selection" data-i18n="chooseLanguage"></label>
+  <select id="language-selection">
+    <option value="en" selected>English</option>
+    <option value="zh">中文</option>
+  </select>
   <script src="options.js"></script>
 </body>
 </html>

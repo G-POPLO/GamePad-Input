@@ -1,0 +1,65 @@
+{
+  "extensionName": {
+    "message": "游戏手柄输入"
+  },
+  "descriptionName": {
+    "message": "使用手柄来操控你的网页"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "gamepadInputSettings": {
+    "message": "游戏手柄输入设置"
+  },
+  "selectStick": {
+    "message": "选择摇杆:"
+  },
+  "leftStick": {
+    "message": "左摇杆"
+  },
+  "rightStick": {
+    "message": "右摇杆"
+  },
+  "saveSettings": {
+    "message": "保存设置"
+  },
+  "chooseLanguage": {
+    "message": "选择语言:"
+  },
+  "configTitle": {
+    "message": "游戏手柄配置"
+  },
+  "usageInstructions": {
+    "message": "使用说明"
+  },
+  "yButton": {
+    "message": "Y 按钮: 刷新当前页面。"
+  },
+  "bButton": {
+    "message": "B 按钮: 关闭当前标签页。"
+  },
+  "homeButton": {
+    "message": "A 按钮: 创建新标签页。"
+  },
+  "lbButton": {
+    "message": "左扳机（LB）按钮: 切换到前一个标签页。"
+  },
+  "rbButton": {
+    "message": "右扳机（RB）按钮: 切换到下一个标签页。"
+  },
+  "ltButton": {
+    "message": "左触发器（LT）按钮: 后退历史记录。"
+  },
+  "rtButton": {
+    "message": "右触发器（RT）按钮: 前进历史记录。"
+  },
+  "xButton": {
+    "message": "X 按钮: 复制当前标签页。"
+  },
+  "Settingssaved": {
+    "message": "设置已保存"
+  },
+  "Failedtosavesettings": {
+    "message": "设置保存失败"
+  }
+}

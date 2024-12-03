@@ -1,0 +1,62 @@
+{
+  "gamepadInputOptions": {
+    "message": "GamePad Input Options"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "gamepadInputSettings": {
+    "message": "GamePad Input Settings"
+  },
+  "selectStick": {
+    "message": "Select Stick:"
+  },
+  "leftStick": {
+    "message": "Left Stick"
+  },
+  "rightStick": {
+    "message": "Right Stick"
+  },
+  "saveSettings": {
+    "message": "Save Settings"
+  },
+  "chooseLanguage": {
+    "message": "Choose Language:"
+  },
+  "configTitle": {
+    "message": "GamePad Configuration"
+  },
+  "usageInstructions": {
+    "message": "Usage Instructions"
+  },
+  "yButton": {
+    "message": "Y Button: Refresh the current page."
+  },
+  "bButton": {
+    "message": "B Button: Close the current tab."
+  },
+  "homeButton": {
+    "message": "A Button: Create a new tab."
+  },
+  "lbButton": {
+    "message": "Left Bumper (LB): Switch to the previous tab."
+  },
+  "rbButton": {
+    "message": "Right Bumper (RB): Switch to the next tab."
+  },
+  "ltButton": {
+    "message": "Left Trigger (LT): Go back in history."
+  },
+  "rtButton": {
+    "message": "Right Trigger (RT): Go forward in history."
+  },
+  "xButton": {
+    "message": "X Button: Duplicate the current tab."
+  },
+  "Settingssaved": {
+    "message": "Settings saved!"
+  },
+  "Failedtosavesettings": {
+    "message": "Failed to save settings."
+  }
+}

@@ -32,18 +32,3 @@ li strong {
   color: #007BFF;
 }
 
-#close-config {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#close-config:hover {
-  background-color: #0056b3;
-}
