@@ -1,8 +1,3 @@
-
-### 主 README.md 提供语言选择
-
-在你的仓库根目录下创建 `README.md` 和 `README-zh.md` 文件，并将上述内容分别复制到相应的文件中。然后，在 `README.md` 的顶部添加语言选择链接：
-
 # GamePad Input Extension
 
 ## Language
