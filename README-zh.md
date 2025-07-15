@@ -1,5 +1,5 @@
 # GamePad 扩展
-
+<a rel="noreferrer noopener" href="https://addons.mozilla.org/firefox/addon/gamepad-input"><img alt="Firefox Add-ons" src="https://img.shields.io/badge/Firefox-141e24.svg?&style=for-the-badge&logo=firefox-browser&logoColor=white"></a>
 ## 概述
 GamePad 扩展允许您使用游戏手柄控制网页。此扩展程序设计用于各种网页，包括新标签页，并为浏览和与网页内容交互提供了无缝体验。
 
