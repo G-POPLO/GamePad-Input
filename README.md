@@ -1,5 +1,7 @@
 # GamePad Input Extension
 <a rel="noreferrer noopener" href="https://addons.mozilla.org/firefox/addon/gamepad-input"><img alt="Firefox Add-ons" src="https://img.shields.io/badge/Firefox-141e24.svg?&style=for-the-badge&logo=firefox-browser&logoColor=white"></a>
+
+[![Node.js CI](https://github.com/G-POPLO/GamePad-Input/actions/workflows/node.js.yml/badge.svg)](https://github.com/G-POPLO/GamePad-Input/actions/workflows/node.js.yml)
 ## Language
 - [English](README.md)
 - [中文](README-zh.md)
@@ -33,3 +35,4 @@ The GamePad Extension allows you to control web pages using a gamepad. This exte
 ### License
    - This project is licensed under the MIT License. See the LICENSE file for details.
    
+
