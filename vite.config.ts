@@ -9,6 +9,9 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
+      input: {
+        config: 'src/config/config.html',
+      },
       output: {
         entryFileNames: '[name].js',
         chunkFileNames: '[name].js',

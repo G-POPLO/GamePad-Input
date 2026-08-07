@@ -16,6 +16,21 @@
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #3b82f6;
+    --color-primary-hover: #60a5fa;
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-border: #334155;
+    --color-success: #22c55e;
+    --color-error: #f87171;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -64,6 +79,7 @@ input[type='number'] {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background-color: var(--color-surface);
+  color: var(--color-text);
   font-size: 14px;
 }
 
