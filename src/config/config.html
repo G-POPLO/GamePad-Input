@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="config.css" />
+    <title data-i18n="configTitle"></title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 data-i18n="configTitle"></h1>
+        <p data-i18n="gamepadInputSettings"></p>
+      </header>
+
+      <section class="card">
+        <h2 data-i18n="usageInstructions"></h2>
+        <ul class="instructions">
+          <li><strong data-i18n="yButton"></strong></li>
+          <li><strong data-i18n="bButton"></strong></li>
+          <li><strong data-i18n="homeButton"></strong></li>
+          <li><strong data-i18n="lbButton"></strong></li>
+          <li><strong data-i18n="rbButton"></strong></li>
+          <li><strong data-i18n="ltButton"></strong></li>
+          <li><strong data-i18n="rtButton"></strong></li>
+          <li><strong data-i18n="xButton"></strong></li>
+          <li><strong data-i18n="cursorModeHint"></strong></li>
+          <li><strong data-i18n="focusModeHint"></strong></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="gamepadStatusTitle"></h2>
+        <p id="gamepad-status" data-i18n="noGamepadConnected"></p>
+        <ul id="gamepad-list"></ul>
+      </section>
+    </div>
+
+    <script type="module" src="config.ts"></script>
+  </body>
+</html>

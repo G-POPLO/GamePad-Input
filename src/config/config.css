@@ -1,0 +1,52 @@
+body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+header {
+  margin-bottom: var(--spacing-lg);
+}
+
+header h1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+header p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.instructions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instructions li {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.instructions li strong {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+#gamepad-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-sm) 0 0;
+}
+
+#gamepad-list li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}

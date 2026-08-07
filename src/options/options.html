@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="options.css" />
+    <title data-i18n="gamepadInputSettings"></title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 data-i18n="gamepadInputSettings"></h1>
+        <button id="settings-button" type="button" data-i18n="settings"></button>
+      </header>
+
+      <section class="card">
+        <label for="stick-selection" data-i18n="selectStick"></label>
+        <select id="stick-selection">
+          <option value="left" data-i18n="leftStick"></option>
+          <option value="right" data-i18n="rightStick"></option>
+        </select>
+      </section>
+
+      <section class="card">
+        <label for="deadzone" data-i18n="deadzoneLabel"></label>
+        <input id="deadzone" type="number" min="0" max="1" step="0.05" value="0.1" />
+
+        <label for="scroll-speed" data-i18n="scrollSpeedLabel"></label>
+        <input id="scroll-speed" type="number" min="1" max="50" step="1" value="10" />
+
+        <label for="scroll-mode" data-i18n="scrollModeLabel"></label>
+        <select id="scroll-mode">
+          <option value="smooth" data-i18n="smoothScroll"></option>
+          <option value="page" data-i18n="pageScroll"></option>
+        </select>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="buttonMappingTitle"></h2>
+        <div id="button-mapping" class="button-mapping"></div>
+      </section>
+
+      <section class="card actions">
+        <button id="save-settings" type="button" data-i18n="saveSettings"></button>
+        <button id="export-config" type="button" data-i18n="exportConfig"></button>
+        <button id="import-config" type="button" data-i18n="importConfig"></button>
+        <input id="import-file" type="file" accept="application/json" hidden />
+        <p id="status-message" class="status-message"></p>
+      </section>
+    </div>
+
+    <script type="module" src="options.ts"></script>
+  </body>
+</html>

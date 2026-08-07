@@ -1,4 +1,10 @@
 {
+  "extensionName": {
+    "message": "GamePad Input"
+  },
+  "descriptionName": {
+    "message": "Control web pages with your gamepad"
+  },
   "gamepadInputOptions": {
     "message": "GamePad Input Options"
   },
@@ -19,6 +25,39 @@
   },
   "saveSettings": {
     "message": "Save Settings"
+  },
+  "exportConfig": {
+    "message": "Export"
+  },
+  "importConfig": {
+    "message": "Import"
+  },
+  "exportSuccess": {
+    "message": "Configuration exported."
+  },
+  "importSuccess": {
+    "message": "Configuration imported."
+  },
+  "importError": {
+    "message": "Failed to import configuration."
+  },
+  "deadzoneLabel": {
+    "message": "Deadzone:"
+  },
+  "scrollSpeedLabel": {
+    "message": "Scroll Speed:"
+  },
+  "scrollModeLabel": {
+    "message": "Scroll Mode:"
+  },
+  "smoothScroll": {
+    "message": "Smooth Scroll"
+  },
+  "pageScroll": {
+    "message": "Page Scroll"
+  },
+  "buttonMappingTitle": {
+    "message": "Button Mapping"
   },
   "chooseLanguage": {
     "message": "Choose Language:"
@@ -52,6 +91,21 @@
   },
   "xButton": {
     "message": "X Button: Duplicate the current tab."
+  },
+  "cursorModeHint": {
+    "message": "Select Button: Toggle cursor mode for precise clicking."
+  },
+  "focusModeHint": {
+    "message": "D-Pad Up/Down: Navigate focusable elements; A Button: Activate focused element."
+  },
+  "gamepadStatusTitle": {
+    "message": "Connected Gamepads"
+  },
+  "noGamepadConnected": {
+    "message": "No gamepad connected. Connect a gamepad and press any button."
+  },
+  "gamepadConnectedCount": {
+    "message": "$1 gamepad(s) connected."
   },
   "Settingssaved": {
     "message": "Settings saved!"

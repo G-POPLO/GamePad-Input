@@ -1,0 +1,46 @@
+{
+  "name": "gamepad-input",
+  "version": "2.0.0",
+  "description": "Control web pages with your gamepad",
+  "type": "module",
+  "license": "MIT",
+  "author": "G-POPLO",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/G-POPLO/GamePad-Input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/G-POPLO/GamePad-Input/issues"
+  },
+  "homepage": "https://github.com/G-POPLO/GamePad-Input#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "@eslint/js": "^9.20.0",
+    "@types/chrome": "^0.0.304",
+    "@types/node": "^22.13.1",
+    "eslint": "^9.20.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.14.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0",
+    "vite": "^5.4.14",
+    "vitest": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

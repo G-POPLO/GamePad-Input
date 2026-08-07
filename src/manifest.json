@@ -1,32 +1,30 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
-  "version": "1.0",
+  "version": "2.0",
   "description": "__MSG_descriptionName__",
-  "default_locale": "zh_CN", // 默认语言
+  "default_locale": "zh_CN",
   "icons": {
     "48": "icon.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background/index.ts",
+    "type": "module"
   },
   "action": {
-    "default_popup": "options.html"
+    "default_popup": "src/options/options.html"
   },
-  "permissions": [
-    "storage",
-    "activeTab",
-    "tabs"
-  ],
+  "permissions": ["storage", "activeTab", "tabs"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["src/content/index.ts"],
+      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["styles.css", "config.html"],
+      "resources": ["src/styles/base.css", "src/config/config.html"],
       "matches": ["<all_urls>"]
     }
   ],

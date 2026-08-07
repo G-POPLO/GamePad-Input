@@ -1,0 +1,68 @@
+body {
+  width: 360px;
+  min-height: 200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.header button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.card h2 {
+  font-size: 14px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card input,
+.card select {
+  margin-bottom: var(--spacing-sm);
+}
+
+.button-mapping {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.button-mapping label {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.button-mapping select {
+  width: 80px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.actions button {
+  flex: 1 1 auto;
+  min-width: 90px;
+}
+
+#status-message {
+  flex-basis: 100%;
+}
