@@ -83,7 +83,7 @@ function renderButtonMapping(config: UserConfig): void {
 
 function bindEvents(): void {
   document.getElementById('save-settings')?.addEventListener('click', handleSave);
-  document.getElementById('settings-button')?.addEventListener('click', openConfigPage);
+  document.getElementById('instructions-button')?.addEventListener('click', openInstructionsPage);
   document.getElementById('export-config')?.addEventListener('click', handleExport);
   document.getElementById('import-config')?.addEventListener('click', () => {
     document.getElementById('import-file')?.click();
@@ -126,7 +126,7 @@ async function handleSave(): Promise<void> {
   }
 }
 
-function openConfigPage(): void {
+function openInstructionsPage(): void {
   void chrome.tabs.create({ url: chrome.runtime.getURL('src/config/config.html') });
 }
 
