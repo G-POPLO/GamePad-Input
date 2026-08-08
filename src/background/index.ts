@@ -11,34 +11,36 @@ import {
   switchToNextTab,
 } from './tab-operations.js';
 
-async function init(): Promise<void> {
-  const config = await getStoredConfig();
-  setConfig(config);
+export function initBackground(): void {
+  async function initialize(): Promise<void> {
+    const config = await getStoredConfig();
+    setConfig(config);
 
-  // Notify all tabs about the current axes.
-  broadcastToAllTabs({ type: 'update_axes', axes: [config.axes.vertical, config.axes.horizontal] });
-}
-
-void init();
-
-chrome.runtime.onMessage.addListener((request: MessagePayload, sender, sendResponse) => {
-  void handleMessage(request, sender).then(sendResponse).catch(sendResponse);
-  return true; // Keep channel open for async response.
-});
-
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete' && tab.url?.startsWith('http')) {
-    const config = getConfig();
-    if (config) {
-      sendTabMessage(tabId, {
-        type: 'update_axes',
-        axes: [config.axes.vertical, config.axes.horizontal],
-      }).catch(() => {
-        // Ignore errors for non-injectable tabs.
-      });
-    }
+    // Notify all tabs about the current axes.
+    broadcastToAllTabs({ type: 'update_axes', axes: [config.axes.vertical, config.axes.horizontal] });
   }
-});
+
+  void initialize();
+
+  chrome.runtime.onMessage.addListener((request: MessagePayload, sender, sendResponse) => {
+    void handleMessage(request, sender).then(sendResponse).catch(sendResponse);
+    return true; // Keep channel open for async response.
+  });
+
+  chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (changeInfo.status === 'complete' && tab.url?.startsWith('http')) {
+      const config = getConfig();
+      if (config) {
+        sendTabMessage(tabId, {
+          type: 'update_axes',
+          axes: [config.axes.vertical, config.axes.horizontal],
+        }).catch(() => {
+          // Ignore errors for non-injectable tabs.
+        });
+      }
+    }
+  });
+}
 
 async function handleMessage(
   request: MessagePayload,
@@ -52,8 +54,13 @@ async function handleMessage(
         return { status: 'error', message: 'Invalid axes' };
       }
 
+      const [vertical, horizontal] = request.axes;
+      if (vertical === undefined || horizontal === undefined) {
+        return { status: 'error', message: 'Invalid axes' };
+      }
+
       const config = getConfig() ?? (await getStoredConfig());
-      config.axes = { vertical: request.axes[0], horizontal: request.axes[1] };
+      config.axes = { vertical, horizontal };
       await saveConfig(config);
       setConfig(config);
 

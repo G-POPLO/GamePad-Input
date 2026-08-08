@@ -1,4 +1,5 @@
 {
+  "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
@@ -16,9 +17,17 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": false,
-    "types": ["chrome", "node", "vitest/globals"]
+    "verbatimModuleSyntax": false
   },
-  "include": ["src/**/*", "tests/**/*", "vite.config.ts", "eslint.config.mjs", "prettier.config.mjs"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    ".wxt/**/*",
+    "entrypoints/**/*",
+    "src/**/*",
+    "tests/**/*",
+    "wxt.config.ts",
+    "vitest.config.ts",
+    "eslint.config.mjs",
+    "prettier.config.mjs"
+  ],
+  "exclude": ["node_modules", "dist", ".output"]
 }

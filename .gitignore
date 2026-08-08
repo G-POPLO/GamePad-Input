@@ -7,6 +7,14 @@ node_modules/
 dist/
 build/
 *.zip
+.output/
+.wxt/
+
+# Test output
+test-results/
+
+# Logs output
+logs/
 
 # Logs
 logs

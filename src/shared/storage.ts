@@ -13,10 +13,10 @@ export async function getStoredConfig(): Promise<UserConfig> {
   if (!stored.axes && result[LEGACY_AXES_KEY]) {
     const legacyAxes: number[] = result[LEGACY_AXES_KEY];
     if (legacyAxes.length >= 2) {
-      stored.axes = {
-        vertical: legacyAxes[0],
-        horizontal: legacyAxes[1],
-      };
+      const [vertical, horizontal] = legacyAxes;
+      if (vertical !== undefined && horizontal !== undefined) {
+        stored.axes = { vertical, horizontal };
+      }
     }
   }
 

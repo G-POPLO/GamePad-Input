@@ -34,7 +34,7 @@ export async function switchToPreviousTab(currentTabId: number): Promise<void> {
   const currentIndex = tabs.findIndex((tab) => tab.id === currentTabId);
   if (currentIndex >= 0) {
     const previousTab = tabs[(currentIndex - 1 + tabs.length) % tabs.length];
-    if (previousTab.id) {
+    if (previousTab?.id) {
       await chrome.tabs.update(previousTab.id, { active: true });
     }
   }
@@ -46,7 +46,7 @@ export async function switchToNextTab(currentTabId: number): Promise<void> {
   const currentIndex = tabs.findIndex((tab) => tab.id === currentTabId);
   if (currentIndex >= 0) {
     const nextTab = tabs[(currentIndex + 1) % tabs.length];
-    if (nextTab.id) {
+    if (nextTab?.id) {
       await chrome.tabs.update(nextTab.id, { active: true });
     }
   }

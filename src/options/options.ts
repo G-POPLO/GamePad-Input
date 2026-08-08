@@ -127,7 +127,7 @@ async function handleSave(): Promise<void> {
 }
 
 function openInstructionsPage(): void {
-  void chrome.tabs.create({ url: chrome.runtime.getURL('src/config/config.html') });
+  void chrome.tabs.create({ url: chrome.runtime.getURL('config.html') });
 }
 
 function handleExport(): void {

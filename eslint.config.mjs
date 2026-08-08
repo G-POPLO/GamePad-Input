@@ -5,12 +5,18 @@ import globals from 'globals';
 
 export default tseslint.config(
   {
-    ignores: ['dist/**', 'node_modules/**', '*.d.ts'],
+    ignores: ['dist/**', 'node_modules/**', '*.d.ts', '.wxt/**', '.output/**'],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    files: ['src/**/*.ts', 'tests/**/*.ts', 'vite.config.ts'],
+    files: [
+      'src/**/*.ts',
+      'tests/**/*.ts',
+      'entrypoints/**/*.ts',
+      'wxt.config.ts',
+      'vitest.config.ts',
+    ],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
