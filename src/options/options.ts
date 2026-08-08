@@ -57,7 +57,7 @@ function renderButtonMapping(config: UserConfig): void {
   const container = document.getElementById('button-mapping');
   if (!container) return;
 
-  container.innerHTML = '';
+  container.replaceChildren();
 
   for (const [action, label] of Object.entries(buttonLabels)) {
     const labelEl = document.createElement('label');

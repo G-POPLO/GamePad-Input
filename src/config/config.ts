@@ -18,7 +18,7 @@ function updateGamepadStatus(): void {
 
   if (connected.length === 0) {
     statusEl.textContent = chrome.i18n.getMessage('noGamepadConnected') || 'No gamepad connected';
-    listEl.innerHTML = '';
+    listEl.replaceChildren();
     return;
   }
 
@@ -26,13 +26,13 @@ function updateGamepadStatus(): void {
     chrome.i18n.getMessage('gamepadConnectedCount', connected.length.toString()) ||
     `${connected.length} gamepad(s) connected`;
 
-  listEl.innerHTML = connected.map((gp) => `<li>${escapeHtml(gp.id)}</li>`).join('');
-}
-
-function escapeHtml(text: string): string {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+  listEl.replaceChildren(
+    ...connected.map((gp) => {
+      const li = document.createElement('li');
+      li.textContent = gp.id;
+      return li;
+    }),
+  );
 }
 
 init();

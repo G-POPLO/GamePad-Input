@@ -10,16 +10,13 @@
 
 ## Overview
 
-The GamePad Input Extension allows you to control web pages using a gamepad. It is designed to work with various web pages, including new tab pages, and provides a seamless experience for navigating and interacting with web content.
+The GamePad Input Extension allows you to control web pages using a gamepad. It is designed to work with various web pages,and provides a seamless experience for navigating and interacting with web content.
 
 ## Features
 
 - **Gamepad Control**: Use your gamepad to navigate and interact with web pages.
 - **Customizable Axes**: Select which axes on the gamepad to use for navigation.
 - **Customizable Button Mapping**: Remap gamepad buttons to different browser actions.
-- **New Tab Page Support**: Works with custom new tab pages, including third-party extensions like Infinity New Tab.
-- **Cursor Mode**: Control a virtual cursor with your gamepad for precise clicking.
-- **Focus Navigation**: Navigate between focusable elements using the gamepad.
 
 ## Installation
 
