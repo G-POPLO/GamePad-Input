@@ -17,7 +17,10 @@ export function initBackground(): void {
     setConfig(config);
 
     // Notify all tabs about the current axes.
-    broadcastToAllTabs({ type: 'update_axes', axes: [config.axes.vertical, config.axes.horizontal] });
+    await broadcastToAllTabs({
+      type: 'update_axes',
+      axes: [config.axes.vertical, config.axes.horizontal],
+    });
   }
 
   void initialize();
@@ -31,7 +34,7 @@ export function initBackground(): void {
     if (changeInfo.status === 'complete' && tab.url?.startsWith('http')) {
       const config = getConfig();
       if (config) {
-        sendTabMessage(tabId, {
+        void sendTabMessage(tabId, {
           type: 'update_axes',
           axes: [config.axes.vertical, config.axes.horizontal],
         }).catch(() => {
@@ -64,7 +67,7 @@ async function handleMessage(
       await saveConfig(config);
       setConfig(config);
 
-      broadcastToAllTabs({ type: 'update_axes', axes: request.axes });
+      await broadcastToAllTabs({ type: 'update_axes', axes: request.axes });
       return { status: 'success' };
     }
 
@@ -74,7 +77,7 @@ async function handleMessage(
       }
       await saveConfig(request.config);
       setConfig(request.config);
-      broadcastToAllTabs({ type: 'update_config', config: request.config });
+      await broadcastToAllTabs({ type: 'update_config', config: request.config });
       return { status: 'success' };
     }
 
