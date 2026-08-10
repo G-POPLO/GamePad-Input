@@ -30,7 +30,7 @@ export async function saveConfig(config: UserConfig): Promise<void> {
 function mergeWithDefaults(stored: StoredConfig): UserConfig {
   return {
     axes: stored.axes ?? { ...DEFAULT_AXES },
-    buttonMap: stored.buttonMap ?? { ...DEFAULT_CONFIG.buttonMap },
+    buttonMap: { ...DEFAULT_CONFIG.buttonMap, ...stored.buttonMap },
     deadzone: stored.deadzone ?? DEFAULT_CONFIG.deadzone,
     scrollSpeed: stored.scrollSpeed ?? DEFAULT_CONFIG.scrollSpeed,
     scrollMode: stored.scrollMode ?? DEFAULT_CONFIG.scrollMode,
