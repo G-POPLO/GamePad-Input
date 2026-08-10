@@ -1,6 +1,9 @@
 # GamePad Input Extension
 
+![shop-big](.image/shop-big.png)
+
 [![Firefox Add-ons](https://img.shields.io/badge/Firefox-141e24.svg?&style=for-the-badge&logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/firefox/addon/gamepad-input)
+[![Edge Add-ons](https://img.shields.io/badge/Edge-0078d7.svg?&style=for-the-badge&logo=microsoft-edge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/pmmmbdpkgfnhohgknkmfgnapkbjlfdhi)
 [![Node.js CI](https://github.com/G-POPLO/GamePad-Input/actions/workflows/ci.yml/badge.svg)](https://github.com/G-POPLO/GamePad-Input/actions/workflows/ci.yml)
 
 ## Language
@@ -17,6 +20,8 @@ The GamePad Input Extension allows you to control web pages using a gamepad. It 
 - **Gamepad Control**: Use your gamepad to navigate and interact with web pages.
 - **Customizable Axes**: Select which axes on the gamepad to use for navigation.
 - **Customizable Button Mapping**: Remap gamepad buttons to different browser actions.
+- **Cursor Mode**: Toggle cursor mode for precise clicking.
+- **Navigation Mode**: Navigate focusable elements using the D-pad keys.
 
 ## Installation
 
@@ -46,6 +51,10 @@ Default controls:
 - **Right Bumper (RB)**: Switch to the next tab.
 - **Left Trigger (LT)**: Go back in history.
 - **Right Trigger (RT)**: Go forward in history.
+- **D-Pad Up**: Focus the previous focusable element.
+- **D-Pad Down**: Focus the next focusable element.
+- **D-Pad Left**: Focus the focusable element to the left.
+- **D-Pad Right**: Focus the focusable element to the right.
 
 ## Development
 

@@ -3,7 +3,13 @@ import type { ActionType, UserConfig } from '../shared/types.js';
 
 import { performPageAction } from './actions.js';
 import { isCursorModeActive, toggleCursorMode, moveCursor, clickAtCursor } from './cursor-mode.js';
-import { focusNext, focusPrevious, focusLeft, focusRight, clickFocused } from './focus-navigation.js';
+import {
+  focusNext,
+  focusPrevious,
+  focusLeft,
+  focusRight,
+  clickFocused,
+} from './focus-navigation.js';
 import { handleScroll } from './scroll-handler.js';
 
 const buttonStates = new Map<number, boolean>();

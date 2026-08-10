@@ -1,6 +1,9 @@
 # GamePad 扩展
 
-[![Firefox Add-ons](https://img.shields.io/badge/Firefox-141e24.svg?&style=for-the-badge&logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/firefox/addon/gamepad-input)
+
+
+[![shop-big](.image/shop-big.png)![Firefox Add-ons](https://img.shields.io/badge/Firefox-141e24.svg?&style=for-the-badge&logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/firefox/addon/gamepad-input)
+[![Edge Add-ons](https://img.shields.io/badge/Edge-0078d7.svg?&style=for-the-badge&logo=microsoft-edge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/pmmmbdpkgfnhohgknkmfgnapkbjlfdhi)
 [![Node.js CI](https://github.com/G-POPLO/GamePad-Input/actions/workflows/ci.yml/badge.svg)](https://github.com/G-POPLO/GamePad-Input/actions/workflows/ci.yml)
 
 ## 语言
@@ -17,6 +20,8 @@ GamePad 扩展允许您使用游戏手柄控制网页。此扩展程序设计用
 - **游戏手柄控制**：使用您的游戏手柄来导航和与网页进行交互。
 - **可自定义轴**：选择游戏手柄上的哪些轴用于导航。
 - **可自定义按钮映射**：将游戏手柄按钮重新映射到不同的浏览器操作。
+- **光标模式**：切换光标模式，进行精确点击。
+- **导航模式**：使用 D-pad 键导航可聚焦元素。
 
 ## 安装
 
@@ -46,6 +51,10 @@ git clone https://github.com/G-POPLO/GamePad-Input.git
 - **右扳机（RB）**：切换到下一个标签页。
 - **左触发器（LT）**：后退历史记录。
 - **右触发器（RT）**：前进历史记录。
+- **十字键上**：聚焦上一个可聚焦元素。
+- **十字键下**：聚焦下一个可聚焦元素。
+- **十字键左**：聚焦左侧可聚焦元素。
+- **十字键右**：聚焦右侧可聚焦元素。
 
 ## 开发
 
