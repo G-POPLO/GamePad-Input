@@ -96,7 +96,7 @@
     "message": "Select Button: Toggle cursor mode for precise clicking."
   },
   "focusModeHint": {
-    "message": "D-Pad Up/Down: Navigate focusable elements; A Button: Activate focused element."
+    "message": "D-Pad Up/Down/Left/Right: Navigate focusable elements; A Button: Activate focused element."
   },
   "gamepadStatusTitle": {
     "message": "Connected Gamepads"

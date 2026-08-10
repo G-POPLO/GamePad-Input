@@ -1,5 +1,7 @@
 import { defineConfig } from 'wxt';
 
+import pkg from './package.json' with { type: 'json' };
+
 export default defineConfig({
   imports: false,
   manifestVersion: 3,
@@ -14,7 +16,7 @@ export default defineConfig({
   manifest: ({ browser }) => ({
     name: '__MSG_extensionName__',
     description: '__MSG_descriptionName__',
-    version: '2.0.0',
+    version: pkg.version,
     default_locale: 'zh_CN',
     icons: {
       512: 'icon.png',

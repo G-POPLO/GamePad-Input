@@ -3,7 +3,7 @@ import type { ActionType, UserConfig } from '../shared/types.js';
 
 import { performPageAction } from './actions.js';
 import { isCursorModeActive, toggleCursorMode, moveCursor, clickAtCursor } from './cursor-mode.js';
-import { focusNext, focusPrevious, clickFocused } from './focus-navigation.js';
+import { focusNext, focusPrevious, focusLeft, focusRight, clickFocused } from './focus-navigation.js';
 import { handleScroll } from './scroll-handler.js';
 
 const buttonStates = new Map<number, boolean>();
@@ -54,6 +54,14 @@ function executeAction(action: ActionType, config: UserConfig): void {
 
     case 'focus_previous':
       if (!isCursorModeActive()) focusPrevious();
+      break;
+
+    case 'focus_left':
+      if (!isCursorModeActive()) focusLeft();
+      break;
+
+    case 'focus_right':
+      if (!isCursorModeActive()) focusRight();
       break;
 
     case 'click_focused':

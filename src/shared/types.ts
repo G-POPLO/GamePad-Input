@@ -26,6 +26,8 @@ export type ActionType =
   | 'toggle_scroll_mode'
   | 'focus_next'
   | 'focus_previous'
+  | 'focus_left'
+  | 'focus_right'
   | 'click_focused';
 
 export interface UserConfig {

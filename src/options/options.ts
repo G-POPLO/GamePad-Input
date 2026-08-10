@@ -17,6 +17,8 @@ const buttonLabels: Record<ActionType, string> = {
   toggle_scroll_mode: 'Start',
   focus_next: 'D-Pad Down',
   focus_previous: 'D-Pad Up',
+  focus_left: 'D-Pad Left',
+  focus_right: 'D-Pad Right',
   click_focused: 'A Button (Focus)',
 };
 

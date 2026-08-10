@@ -40,6 +40,8 @@ export const DEFAULT_BUTTON_MAP: Record<ActionType, number> = {
   toggle_scroll_mode: StandardMapping.Start,
   focus_next: StandardMapping.DPadDown,
   focus_previous: StandardMapping.DPadUp,
+  focus_left: StandardMapping.DPadLeft,
+  focus_right: StandardMapping.DPadRight,
   click_focused: StandardMapping.A,
 };
 

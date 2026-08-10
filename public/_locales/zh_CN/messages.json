@@ -93,7 +93,7 @@
     "message": "Select 按钮: 切换光标模式，进行精确点击。"
   },
   "focusModeHint": {
-    "message": "方向键上/下: 在可聚焦元素间导航；A 按钮: 激活当前聚焦元素。"
+    "message": "方向键上/下/左/右: 在可聚焦元素间导航；A 按钮: 激活当前聚焦元素。"
   },
   "gamepadStatusTitle": {
     "message": "已连接手柄"
