@@ -11,7 +11,8 @@ export async function getStoredConfig(): Promise<UserConfig> {
 
   // Migrate legacy selectedAxes format
   if (!stored.axes && result[LEGACY_AXES_KEY]) {
-    const legacyAxes: number[] = result[LEGACY_AXES_KEY];
+    // @types/chrome 0.2+ 将 storage.get 返回类型改为 unknown，需显式断言
+    const legacyAxes = result[LEGACY_AXES_KEY] as number[];
     if (legacyAxes.length >= 2) {
       const [vertical, horizontal] = legacyAxes;
       if (vertical !== undefined && horizontal !== undefined) {

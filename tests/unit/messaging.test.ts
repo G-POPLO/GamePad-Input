@@ -31,11 +31,13 @@ describe('sendRuntimeMessage', () => {
   });
 
   it('rejects when chrome.runtime.lastError is set', async () => {
+    // @types/chrome 0.2+ 中 runtime.lastError 为只读 const，测试中需通过可变形状修改 mock
+    const runtime = chrome.runtime as unknown as { lastError: { message: string } | undefined };
     (chrome.runtime.sendMessage as ReturnType<typeof vi.fn>) = vi.fn(
       (_message: unknown, callback?: (response: unknown) => void) => {
-        chrome.runtime.lastError = { message: 'Something went wrong' };
+        runtime.lastError = { message: 'Something went wrong' };
         callback?.(undefined);
-        chrome.runtime.lastError = undefined;
+        runtime.lastError = undefined;
       },
     );
 
