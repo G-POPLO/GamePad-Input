@@ -87,5 +87,4 @@ pnpm format
 欢迎贡献！如果您有任何建议、错误报告或功能请求，请打开 issue 或提交 pull request。
 
 ## 许可
-
 该项目采用 MIT 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
