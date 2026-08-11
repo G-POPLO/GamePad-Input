@@ -5,21 +5,34 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     strategy:
       matrix:
         node-version: [22.x]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # Installs pnpm from the packageManager field in package.json
+      - name: Install pnpm
+        uses: pnpm/setup@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
@@ -36,5 +49,22 @@ jobs:
       - name: Test
         run: pnpm test
 
-      - name: Build
+      - name: Build (Chrome)
         run: pnpm build
+
+      - name: Build (Firefox)
+        run: pnpm build:firefox
+
+      - name: Upload Chrome build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: chrome-mv3
+          path: .output/chrome-mv3
+          if-no-files-found: error
+
+      - name: Upload Firefox build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: firefox-mv3
+          path: .output/firefox-mv3
+          if-no-files-found: error
