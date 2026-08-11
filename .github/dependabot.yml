@@ -1,11 +1,67 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+# Dependabot version updates configuration
+# Documentation: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # pnpm dependencies (root package.json)
+  # Note: Dependabot uses the "npm" ecosystem for both npm and pnpm projects
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "monthly"
+    open-pull-requests-limit: 10
+    versioning-strategy: "increase"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+    groups:
+      # ESLint and code quality tools
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/*"
+          - "eslint-plugin-*"
+          - "globals"
+      # TypeScript and type definitions
+      typescript:
+        patterns:
+          - "typescript"
+          - "typescript-eslint"
+          - "@types/*"
+      # Build and test tooling (WXT, Vite, Vitest)
+      build-tools:
+        patterns:
+          - "wxt"
+          - "vite"
+          - "vitest"
+      # Remaining pnpm updates
+      dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "eslint"
+          - "@eslint/*"
+          - "eslint-plugin-*"
+          - "globals"
+          - "typescript"
+          - "typescript-eslint"
+          - "@types/*"
+          - "wxt"
+          - "vite"
+          - "vitest"
+
+  # GitHub Actions used in CI/CD workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
