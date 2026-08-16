@@ -1,6 +1,6 @@
 {
   "name": "gamepad-input",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Control web pages with your gamepad",
   "type": "module",
   "license": "MIT",
